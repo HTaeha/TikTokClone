@@ -9,7 +9,7 @@ const Home = () => {
         <View>
             <FlatList
                 data={posts}
-                renderItem={({post}) => <Post post={post}/>}
+                renderItem={({item}) => <Post post={item} />}
                 showsVerticalScrollIndicator={false}
                 snapToInterval={Dimensions.get('window').height}
                 snapToAlignment={'start'}
