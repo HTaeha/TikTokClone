@@ -23,57 +23,59 @@ const Post = () => {
 
     return (
         <View style={styles.container}>
-            <TouchableWithoutFeedback 
-            onPress={onPlayPausePress} 
+            <TouchableWithoutFeedback
+                onPress={onPlayPausePress}
             >
-                <Video
-                    source={{ uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' }}
-                    style={styles.video}
-                    onError={(e) => console.log(e)}
-                    resizeMode={'cover'}
-                    repeat={true}
-                    paused={paused}
-                />
-            </TouchableWithoutFeedback>
+                <View>
+                    <Video
+                        source={{ uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' }}
+                        style={styles.video}
+                        onError={(e) => console.log(e)}
+                        resizeMode={'cover'}
+                        repeat={true}
+                        paused={paused}
+                    />
 
-            <View style={styles.uiContainer}>
-                <View style={styles.rightContainer}>
-                    <View style={styles.profilePictureContainer}>
-                        <Image style={styles.profilePicture} source={{ uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png' }} />
+                    <View style={styles.uiContainer}>
+                        <View style={styles.rightContainer}>
+                            <View style={styles.profilePictureContainer}>
+                                <Image style={styles.profilePicture} source={{ uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png' }} />
 
-                    </View>
-                    <View style={styles.iconContainer}>
-                        <AntDesign name={"heart"} size={40} color="white" />
-                        <Text style={styles.statsLabel}>123</Text>
-                    </View>
+                            </View>
+                            <View style={styles.iconContainer}>
+                                <AntDesign name={"heart"} size={40} color="white" />
+                                <Text style={styles.statsLabel}>123</Text>
+                            </View>
 
-                    <View style={styles.iconContainer}>
-                        <FontAwesome name={"commenting"} size={40} color="white" />
-                        <Text style={styles.statsLabel}>123</Text>
-                    </View>
+                            <View style={styles.iconContainer}>
+                                <FontAwesome name={"commenting"} size={40} color="white" />
+                                <Text style={styles.statsLabel}>123</Text>
+                            </View>
 
-                    <View style={styles.iconContainer}>
-                        <Fontisto name={"share-a"} size={35} color="white" />
-                        <Text style={styles.statsLabel}>123</Text>
-                    </View>
-                </View>
+                            <View style={styles.iconContainer}>
+                                <Fontisto name={"share-a"} size={35} color="white" />
+                                <Text style={styles.statsLabel}>123</Text>
+                            </View>
+                        </View>
 
-                <View style={styles.bottomContainer}>
-                    <View>
-                        <Text style={styles.handle}>@Rabbit</Text>
-                        <Text style={styles.description}>hahahaha hello</Text>
+                        <View style={styles.bottomContainer}>
+                            <View>
+                                <Text style={styles.handle}>@Rabbit</Text>
+                                <Text style={styles.description}>hahahaha hello</Text>
 
-                        <View style={styles.songRow}>
-                            <Entypo name={"beamed-note"} size={24} color="white" />
-                            <Text style={styles.songName}>Nf - The search</Text>
+                                <View style={styles.songRow}>
+                                    <Entypo name={"beamed-note"} size={24} color="white" />
+                                    <Text style={styles.songName}>Nf - The search</Text>
+                                </View>
+                            </View>
+                            <Image
+                                style={styles.songImage}
+                                source={{ uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png' }}
+                            />
                         </View>
                     </View>
-                    <Image
-                        style={styles.songImage}
-                        source={{ uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png' }}
-                    />
                 </View>
-            </View>
+            </TouchableWithoutFeedback>
         </View>
     )
 }
