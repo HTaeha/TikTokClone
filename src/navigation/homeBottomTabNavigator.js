@@ -22,7 +22,7 @@ const HomeBottomTabNavigator = () => {
         }}>
             <Tab.Screen
                 name={"Home"}
-                component={Home}
+                component={() => <Text>Search</Text>}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <Entypo name={'home'} size={25} color={color} />
